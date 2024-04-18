@@ -1,5 +1,5 @@
 #!usr/bin/env python3
-
+#Description: Useful methods for mail
 import os
 import smtplib as smtp
 import tkinter as tk
