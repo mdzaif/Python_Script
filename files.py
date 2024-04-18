@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-
+# Description: Send files with email without login; mail_server: smtp.gmail.com.
 from mail_module import *
 
-#send = input("From: ")
-#key = input("App passwords: ")
-#rec = input("To: ")
-#sub = input("Subject: ")
-send="mimolist20@gmail.com"
-key="zkgn asgb zoij lgqo"
-rec="mdizaif@gmail.com"
-sub="test"
+send = input("From: ")
+key = input("App passwords: ")
+rec = input("To: ")
+sub = input("Subject: ")
 tex = "Attachments: "
 files = To_Mail.get_attach()
 
