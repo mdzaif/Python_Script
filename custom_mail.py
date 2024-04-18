@@ -1,57 +1,33 @@
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+#!/usr/bin/env python3
+#Description: Custom Email; email server: smtp.gmail.com
 
-my_email = input("From: ")
-password_key = input("App password: ")
-receiver_email = input("To: ")
+from mail_module import *
+import csv
+#send = input("From: ")
+#key = input("App password: ")
+#rec = input("To: ")
+#sub = input("Subject: ")
+send ="mdzaifimammahi@gmail.com"
+key = "boey ctnz uiup iakx"
+#rec = "mdizaif@gmail.com"
+sub = "test"
+#Edit the text file
+file = open("test.txt", "r")
+#Edit the html file
+file1 = open("file.html", "r")
+text = file.read()
+html = file1.read()
+adding_file = To_Mail.get_attach()
 
-
-subject = input("Subject: ")
-
-# SMTP Server and port no for GMAIL.com
-gmail_server = "smtp.gmail.com"
-gmail_port = 465
-
-# Starting connection
-my_server = smtplib.SMTP_SSL(gmail_server, gmail_port)
-
-# Login with your email and password
-my_server.login(my_email, password_key)
-
-message = MIMEMultipart("alternative")
-message["Subject"] = subject
-message["From"] = my_email
-message["To"] = receiver_email
-
-#Gmail_User = "Md. Zaif"
-text ="""\
-Hi,
-See your Details:
-Name:
-Your Id:"""
-html_content = """
-<html>
-  <body>
-    <p>You can find me at:</p>
-    <p align="left">
-      <a href="mailto:mdizaif@gmail.com" target="_blank"><img align="center" src="https://raw.githubusercontent.com/mdzaif/mdzaif/main/images/gmail_1.jpg" alt="mdzaifimammahi" height="30" width="40" /></a>
-      <a href="https://www.linkedin.com/in/md-zaif-imam-mahi-70aa84241/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/mdzaif/mdzaif/main/images/LinkedIn_1.jpg" alt="mdzaifimammahi" height="30" width="40" /></a>
-      <a href="https://twitter.com/mdzaifimamamahi" target="_blank"><img align="center" src="https://raw.githubusercontent.com/mdzaif/mdzaif/main/images/twitter_1.jpg" height="30" width="40" /></a>
-      <a href="https://fb.com/mdzaifimammahi" target="_blank"><img align="center" src="https://raw.githubusercontent.com/mdzaif/mdzaif/main/images/facebook_1.jpg" alt="mdzaifimammahi" height="30" width="40" /></a>
-      <a href="https://gitlab.com/mdzaif" target="_blank"><img align="center" src="https://raw.githubusercontent.com/mdzaif/mdzaif/main/images/gitlab_1.jpg" alt="mdzaifimammahi" height="30" width="40" /></a>
-    </p>
-    <br>
-    <br>
-  </body>
-</html>
-"""
-
-message.attach(MIMEText(html_content, "html"))
-
-# Convert message to string
-message_str = message.as_string()
-
-my_server.sendmail(from_addr=my_email, to_addrs=receiver_email, msg=message_str)
-my_server.quit()
-
+#read file:
+with open("list.csv") as con:
+  reader = csv.reader(con)
+  next(reader)
+  for name, id, email in reader:
+    text1 = text.format(name=name, ID=id)
+    rec=email
+    cust = To_Mail(send, key, rec, sub)
+    cust.custom(text1, html)
+    cust.add_file("Attachments:", adding_file)
+    cust.sending()
+    cust.quit_server()
