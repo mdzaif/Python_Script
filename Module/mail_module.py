@@ -38,8 +38,8 @@ class To_Mail:
                 f"attachment; filename = {file_name}"
             )
             self.m.attach(obj)
-        
-            
+
+
 
     def get_attach():
         root = tk.Tk()
@@ -63,10 +63,10 @@ class To_Mail:
 
         if file_l:
             return file_l
-    
+
     def custom(self, tex, html):
         set1 = MIMEText(tex, "plain")
-        set2 = MIMEText(html, "html") 
+        set2 = MIMEText(html, "html")
         self.m.attach(set1)
         self.m.attach(set2)
 
@@ -75,7 +75,7 @@ class To_Mail:
             self.server.sendmail(self.m['From'], self.m['To'], self.m.as_string())
         except Exception as e:
             print(f"Faild: {e}")
-    
+
     def quit_server(self):
         self.server.quit()
         print("Sent")
