@@ -29,7 +29,7 @@ Creating python related script for task automation and task customization.
 &nbsp; &nbsp; &nbsp;- [test.txt](https://github.com/mdzaif/Python_Script/blob/main/Scripts/test.txt)
 
 ### Setup
-In Linux (Debain based):<br>
+In Linux (Debian based):<br>
 Download this github reppository. Edit the PYTHONPATH environment variable(Set the path of Module directory). <br>
 You can copy this(change the user. and make sure that the file is in same directory also your default shell is bash):<br>
 
