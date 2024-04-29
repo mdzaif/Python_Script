@@ -62,7 +62,7 @@ First you have to install python in windows system. Then download this github re
  pip install tk
 ```
 
-<br>Installation:<br>
+<br>Setup PYTHONPATH:<br>
 
 1. Go to the <b>Control panel</b>
 2. Then search for <b>Advanced System Settings</b>. (The link will under the 'System'). The link will look like <b>'View the advanced system settings'</b>
@@ -73,7 +73,7 @@ First you have to install python in windows system. Then download this github re
 
 ### File Description
 In <b>Module:</b> We have  the <b>mail_module.py</b> file. which contains all methods under a single class.<br>
-In <b>Scripts:</b><br>
+In <b>Scripts(executable files are store here):</b><br>
 <b>custom_mail.py:</b> Use for custom official mail.<br>
 <b>file.html:</b> html contents for custom mail.<br>
 <b>files.py:</b> sending files with mail.<br>
