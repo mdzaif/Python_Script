@@ -26,6 +26,8 @@ Creating python related script for task automation and task customization.
 
 &nbsp; &nbsp; &nbsp;- [list.csv](https://github.com/mdzaif/Python_Script/blob/main/Scripts/list.csv)<br>
 
+&nbsp; &nbsp; &nbsp;- [remove_back.py](https://github.com/mdzaif/Python_Script/blob/main/Scripts/remove_back.py)<br>
+
 &nbsp; &nbsp; &nbsp;- [test.txt](https://github.com/mdzaif/Python_Script/blob/main/Scripts/test.txt)
 
 ### Setup
@@ -34,34 +36,53 @@ Download this github reppository. Edit the PYTHONPATH environment variable(Set t
 You can copy this(change the user. and make sure that the file is in same directory also your default shell is bash):<br>
 
 ```bash
-$ echo 'export PYTHONPATH="/home/user/Python_Script/Module"' >> ~/.bashrc
+ echo 'export PYTHONPATH="/home/user/Python_Script/Module"' >> ~/.bashrc
 ```
 ```bash
-$ source ~/.bashrc
+ source ~/.bashrc
 ```
 <br><b>Required version </b>:<br>
 <b>Python:</b> Python 3.x<br>
 <br><b>Required Python Libraries</b>:<br>
 <b>Tkinter:</b> It open the file dialog box.<br>
+<b>rembg:</b> Use to remove the background of the image.(version: 10.0)<br>
+<b>pillow:</b> Pillow acually use here to open the image file.(version: 10.3.0)<br>
+<b>cv2(pkg name: opencv-python):</b> Use here to adjust the contrast.(version: 4.9.0.80)<br>
 <br>Installation:<br>
 
-```shell
-$ sudo apt-get install python3-tk
+```bash 
+ sudo apt-get install python3-tk 
+```
+```bash
+sudo apt-get install libgtk2.0-dev pkg-config
+```
+```bash
+pip3 install rembg
+```
+```bash
+pip3 install pillow
+```
+```bash
+pip3 install opencv-python
 ```
 <br>
 In Windows:
 <br>
 First you have to install python in windows system. Then download this github repository.
-<br><b>Required version </b>:<br>
-<b>Python:</b> Python 3.x<br>
-<br><b>Required Python Libraries</b>:<br>
-<b>Tkinter:</b> It open the file dialog box.<br>
 <br>Installation:<br>
 
 ```cmd
  pip install tk
 ```
-
+```cmd
+pip install rembg
+```
+```cmd
+pip install pillow
+```
+```cmd
+pip install opencv-python
+```
 <br>Setup PYTHONPATH:<br>
 
 1. Go to the <b>Control panel</b>
