@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 #Description: Useful methods for mail
 #Library requried: tkinter.
 import os
