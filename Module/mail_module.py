@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!usr/bin/env python3
 #Description: Useful methods for mail
 #Library requried: tkinter.
 import os
@@ -42,27 +42,34 @@ class To_Mail:
 
 
     def get_attach():
-        root = tk.Tk()
-        root.geometry("1200x750")
-        root.withdraw()
-        file_l = filedialog.askopenfilename(
-            parent=root,
-            title='Choose files',
-            multiple=True
-        )
+        while True:
+            fs_t = 0.0
+            root = tk.Tk()
+            root.geometry("1200x750")
+            root.withdraw()
+            file_l = filedialog.askopenfilename(
+                parent=root,
+                title='Choose files',
+                multiple=True
+            )
+            
+            file_list = list(file_l)
+            file_l = []
+            for files in file_list:
+                if os.path.isfile(files):
+                    fs = float(os.stat(files) / (1024 * 1024))
+                    fs_t += fs
+                    file_l.append(files)
+                else:
+                    print(f"File not found: {files}, skipping....")
 
-        file_list = list(file_l)
-        file_l = []
-        for files in file_list:
-
-            # files = files.strip()
-            if os.path.isfile(files):
-                file_l.append(files)
-            else:
-                print(f"File not found: {files}, skipping....")
-
-        if file_l:
-            return file_l
+            if file_l:
+                if fs_t <= 25.0:
+                    return file_l
+                else:
+                    print("File limit is upto 25.0 MB")
+                    print("Re-upload Files...")
+                    continue
 
     def custom(self, tex, html):
         set1 = MIMEText(tex, "plain")
