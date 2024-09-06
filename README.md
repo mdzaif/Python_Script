@@ -1,39 +1,21 @@
 # Python_Script
 Creating python related script for task automation and task customization.
 
-### File Structure
-[Python_Script](Python_Script)<br>
-
-&nbsp; - [Module](https://github.com/mdzaif/Python_Script/tree/main/Module)<br>
-
-&nbsp; &nbsp; &nbsp;-- [__pycache__](https://github.com/mdzaif/Python_Script/tree/main/Module/__pycache__)<br>
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- [__init__.cpython-310.pyc](https://github.com/mdzaif/Python_Script/blob/main/Module/__pycache__/__init__.cpython-310.pyc)<br>
-
-&nbsp; &nbsp; &nbsp;- [mail_module.py](https://github.com/mdzaif/Python_Script/blob/main/Module/mail_module.py)<br>
-
-&nbsp;- [Scripts](https://github.com/mdzaif/Python_Script/tree/main/Scripts)<br>
-
-&nbsp; &nbsp; &nbsp;-- [__pycache__](https://github.com/mdzaif/Python_Script/tree/main/Scripts/__pycache__)<br>
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- [custom_mail.cpython-310.pyc](https://github.com/mdzaif/Python_Script/blob/main/Scripts/__pycache__/custom_mail.cpython-310.pyc)<br>
-
-&nbsp; &nbsp; &nbsp;- [custom_mail.py](https://github.com/mdzaif/Python_Script/blob/main/Scripts/custom_mail.py)<br>
-
-&nbsp; &nbsp; &nbsp;- [file.html](https://github.com/mdzaif/Python_Script/blob/main/Scripts/file.html)<br>
-
-&nbsp; &nbsp; &nbsp;- [files.py](https://github.com/mdzaif/Python_Script/blob/main/Scripts/files.py)<br>
-
-&nbsp; &nbsp; &nbsp;- [list.csv](https://github.com/mdzaif/Python_Script/blob/main/Scripts/list.csv)<br>
-
-&nbsp; &nbsp; &nbsp;- [remove_back.py](https://github.com/mdzaif/Python_Script/blob/main/Scripts/remove_back.py)<br>
-
-&nbsp; &nbsp; &nbsp;- [test.txt](https://github.com/mdzaif/Python_Script/blob/main/Scripts/test.txt)
 
 ### Setup
 In Linux (Debian based):<br>
-Download this github reppository. Edit the PYTHONPATH environment variable(Set the path of Module directory). <br>
-You can copy this(change the user. and make sure that the file is in same directory also your default shell is bash):<br>
+
+<b> Quick Setup:</b>
+
+1. clone this repo.
+
+2. run this script:
+
+```bash
+chmod +x install.sh && ./install.sh
+```
+
+Setup the PYTHONPATH Variable
 
 ```bash
  echo 'export PYTHONPATH="/home/user/Python_Script/Module"' >> ~/.bashrc
@@ -41,31 +23,7 @@ You can copy this(change the user. and make sure that the file is in same direct
 ```bash
  source ~/.bashrc
 ```
-<br><b>Required version </b>:<br>
-<b>Python:</b> Python 3.x<br>
-<br><b>Required Python Libraries</b>:<br>
-<b>Tkinter:</b> It open the file dialog box.<br>
-<b>rembg:</b> Use to remove the background of the image.(version: 10.0)<br>
-<b>pillow:</b> Pillow acually use here to open the image file.(version: 10.3.0)<br>
-<b>cv2(pkg name: opencv-python):</b> Use here to adjust the contrast.(version: 4.9.0.80)<br>
-<br>Installation:<br>
 
-```bash 
- sudo apt-get install python3-tk 
-```
-```bash
-sudo apt-get install libgtk2.0-dev pkg-config
-```
-```bash
-pip3 install rembg
-```
-```bash
-pip3 install pillow
-```
-```bash
-pip3 install opencv-python
-```
-<br>
 In Windows:
 <br>
 First you have to install python in windows system. Then download this github repository.
@@ -91,12 +49,3 @@ pip install opencv-python
 4. Now in the <b>"User variable section..."</b>(Actually top section). Click New.
 5. Now edit these two section:<br> 
 <b>Variable name:</b> PYTHONPATH<br><b>Variable value:</b> copy and paste the path of Module directory which in the Python_Script directory.
-
-### File Description
-In <b>Module:</b> We have  the <b>mail_module.py</b> file. which contains all methods under a single class.<br>
-In <b>Scripts(executable files are store here):</b><br>
-<b>custom_mail.py:</b> Use for custom official mail.<br>
-<b>file.html:</b> html contents for custom mail.<br>
-<b>files.py:</b> sending files with mail.<br>
-<b>list.csv:</b> contains the reciver emails and the variables.<br>
-<b>test.txt:</b> contains the text part for custom mail.
