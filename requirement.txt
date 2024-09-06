@@ -24,6 +24,7 @@ pillow==10.3.0
 platformdirs==4.2.2
 pooch==1.8.2
 protobuf==5.27.1
+psutil==6.0.0
 PyAutoGUI==0.9.54
 PyGetWindow==0.0.9
 PyMatting==1.1.12
