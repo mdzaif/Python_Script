@@ -26,21 +26,18 @@ Setup the PYTHONPATH Variable
 
 In Windows:
 <br>
-First you have to install python in windows system. Then download this github repository.
-<br>Installation:<br>
+First clone this repository
+<br>setup virtualenv(if you run the script in virtual env.):<br>
 
-```cmd
- pip install tk
+```ps1
+python -m venv <enter_a_name_you_want>
 ```
-```cmd
-pip install rembg
+
+```ps1
+pip install -r requirement.txt
 ```
-```cmd
-pip install pillow
-```
-```cmd
-pip install opencv-python
-```
+
+Note that, in .gitingore file add your myenv folder to avoid git track.
 <br>Setup PYTHONPATH:<br>
 
 1. Go to the <b>Control panel</b>
