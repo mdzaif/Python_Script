@@ -1,21 +1,23 @@
 import os
 import sys
-import mimetypes
+#import mimetypes
+import magic
 from PIL import Image
 from moviepy.editor import VideoFileClip
 from mutagen import File as AudioFile
 
 def get_file_properties(file_path):
+
     # Get the MIME type of the file
-    mime_type, _ = mimetypes.guess_type(file_path)
+    mime_type = magic.from_file(file_path)
 
     # Get file size in bytes and convert to MB
     file_size = os.path.getsize(file_path)
     file_size_mb = file_size / (1024 * 1024)
 
     print(f"File: {file_path}")
-    print(f"Size: {file_size_mb:.2f} MB")
-    print(f"MIME Type: {mime_type}")
+    print(f"Size: {file_size_mb:.2f} MB ({file_size} bytes)")
+    print(f"Type: {mime_type}")
 
     # If the file is an image
     if mime_type and mime_type.startswith('image'):
@@ -58,7 +60,7 @@ def get_file_properties(file_path):
 
 # Main execution
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 1:
         print("Usage: python properties.py <file-path>")
     else:
         file = sys.argv
