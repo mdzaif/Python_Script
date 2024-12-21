@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 #import mimetypes
 import magic
 from PIL import Image
@@ -14,10 +15,16 @@ def get_file_properties(file_path):
     # Get file size in bytes and convert to MB
     file_size = os.path.getsize(file_path)
     file_size_mb = file_size / (1024 * 1024)
+    file_created = datetime.datetime.fromtimestamp(os.path.getctime(file_path))
+    file_last_modified = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
+    
 
     print(f"File: {file_path}")
+    print(f"First Created: {file_created}")
+    print(f"Last Modified: {file_last_modified}")
     print(f"Size: {file_size_mb:.2f} MB ({file_size} bytes)")
     print(f"Type: {mime_type}")
+    
 
     # If the file is an image
     if mime_type and mime_type.startswith('image'):
