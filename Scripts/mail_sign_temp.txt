@@ -1,0 +1,35 @@
+<html>
+  <body>
+      Thanking you,<br>
+      <strong>{name}</strong><br>
+      {position} || {company_name}<br>
+      <b>C:</b>  {country_code} {number}<br>
+      <b>E: </b> <a href="mailto:{mail}" style="color: #0066cc; text-decoration: none;">{mail}</a><br>
+      <b>A:</b> {address} <br>
+      You can also find us at:
+    <div style="margin-top: 10px;">
+    
+      <!------------- website ------------->
+      <a href="{web_link}" target="_blank" style="text-decoration: none; margin-right: 8px; display: inline-block;">
+        <img src="{web_logo}" width="24" height="24" style="vertical-align: middle;" alt="{web_link}">
+      </a>
+      
+      <!-- Facebook (Official Blue: #1877F2) -->
+      <a href="{facebook_link}" target="_blank" style="text-decoration: none; margin-right: 8px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="24" height="24" style="vertical-align: middle;" alt="Facebook">
+      </a>
+      
+      <!-- LinkedIn (Official Blue: #0A66C2) -->
+      <a href="{linkedin_link}" target="_blank" style="text-decoration: none; margin-right: 8px; display: inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="24" height="24" style="vertical-align: middle;" alt="LinkedIn">
+      </a>
+      
+      <!-- X/Twitter (Official Black) -->
+      <a href="{x_link}" target="_blank" style="text-decoration: none; margin-right: 8px; display: inline-block;">
+        <img src="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png" width="24" height="24" style="vertical-align: middle;" alt="X (Twitter)">
+      </a>
+      
+
+    </div>
+  </body>
+</html>
